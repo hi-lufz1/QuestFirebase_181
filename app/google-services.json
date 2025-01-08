@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797257965091",
+    "project_id": "fir-pam-17b80",
+    "storage_bucket": "fir-pam-17b80.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797257965091:android:c679f3707d2bf427605b96",
+        "android_client_info": {
+          "package_name": "com.example.firebasepam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi0VrJivycjtxOtig0t3jORD4gmM0qvI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
