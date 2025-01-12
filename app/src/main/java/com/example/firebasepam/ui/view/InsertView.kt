@@ -175,7 +175,7 @@ fun FormMahasiswa(
             modifier = Modifier.fillMaxWidth(),
             value = mahasiswaEvent.nama,
             onValueChange = {
-                mahasiswaEvent.copy(nama = it)
+                onValueChange(mahasiswaEvent.copy(nama = it))
             },
             label = { Text("Nama") },
             isError = errorState.nama != null,
@@ -190,7 +190,7 @@ fun FormMahasiswa(
             modifier = Modifier.fillMaxWidth(),
             value = mahasiswaEvent.nim,
             onValueChange = {
-                mahasiswaEvent.copy(nim = it)
+                onValueChange(mahasiswaEvent.copy(nim = it))
             },
             label = { Text("NIM") },
             isError = errorState.nama != null,
@@ -234,7 +234,7 @@ fun FormMahasiswa(
             modifier = modifier.fillMaxWidth(),
             value = mahasiswaEvent.alamat,
             onValueChange = {
-                mahasiswaEvent.copy(alamat = it)
+                onValueChange(mahasiswaEvent.copy(alamat = it))
             },
             label = { Text("Alamat") },
             isError = errorState.alamat != null,
@@ -277,7 +277,7 @@ fun FormMahasiswa(
             modifier = Modifier.fillMaxWidth(),
             value = mahasiswaEvent.angkatan,
             onValueChange = {
-                mahasiswaEvent.copy(angkatan = it)
+                onValueChange(mahasiswaEvent.copy(angkatan = it))
             },
             label = { Text("Angkatan") },
             isError = errorState.angkatan != null,

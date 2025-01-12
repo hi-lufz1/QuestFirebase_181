@@ -89,8 +89,8 @@ data class FormErrorState(
     val angkatan: String? = null
 ) {
     fun isValid(): Boolean {
-        return nim != null && nama != null && jenis_kelamin != null
-                && alamat != null && kelas != null && angkatan != null
+        return nim == null && nama == null && jenis_kelamin == null
+                && alamat == null && kelas == null && angkatan == null
     }
 }
 
