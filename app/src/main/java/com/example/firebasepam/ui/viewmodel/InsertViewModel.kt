@@ -3,6 +3,19 @@ package com.example.firebasepam.ui.viewmodel
 import com.example.firebasepam.model.Mahasiswa
 
 
+sealed class FormState {
+    object Idle : FormState()
+    object Loading : FormState()
+    data class Success(val message: String) : FormState()
+    data class Error(val message: String) : FormState()
+}
+
+data class InsertUiState(
+    val insertUiEvent: MahasiswaEvent = MahasiswaEvent(),
+    val isEntryValid: FormErrorState = FormErrorState()
+)
+
+
 data class FormErrorState(
     val nim: String? = null,
     val nama: String? = null,
@@ -16,7 +29,6 @@ data class FormErrorState(
                 && alamat != null && kelas != null && angkatan != null
     }
 }
-
 
 // variabel untuk simpan data dari form input
 data class MahasiswaEvent(
