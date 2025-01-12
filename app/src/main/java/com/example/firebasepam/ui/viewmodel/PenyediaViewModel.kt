@@ -13,6 +13,7 @@ object PenyediaViewModel {
     @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
     val Factory = viewModelFactory {
         initializer { HomeViewModel(MahasiswaApp().container.mahasiswaRepository) }
+        initializer { InsertViewModel(MahasiswaApp().container.mahasiswaRepository) }
     }
 
     fun CreationExtras.MahasiswaApp(): MahasiswaApplication =
