@@ -52,12 +52,13 @@ fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     modifier: Modifier = Modifier,
     onDetailClick: (String) -> Unit = {},
-    viewModel: HomeViewModel = viewModel (factory = PenyediaViewModel.Factory)
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ) {
 
     Scaffold(
         modifier = modifier,
-        topBar = { TopAppBar(title = { Text("Home") })
+        topBar = {
+            TopAppBar(title = { Text("Home") })
         },
         floatingActionButton = {
             FloatingActionButton(
@@ -72,8 +73,9 @@ fun HomeScreen(
         HomeStatus(
             homeUiState = viewModel.mhsUIState,
             retryAction = { viewModel.getMhs() }, modifier = Modifier.padding(innerPadding),
-            onDetailClick = onDetailClick, onDeleteClick = {
-                viewModel.getMhs()
+            onDetailClick = onDetailClick,
+            onDeleteClick = {
+                viewModel.deleteMhs(it)
             }
         )
     }
